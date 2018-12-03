@@ -1,6 +1,6 @@
-var json_all_oaks_6 = {
+var json_IslandOaks_6 = {
 "type": "FeatureCollection",
-"name": "all_oaks_6",
+"name": "IslandOaks_6",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "FILESOURCE": "C:\\Temp\\Laura K GPS Files\\zone11€6_MagellanGPSpts.shp", "Comment": null, "AREA": 0.0, "PERIMETER": 0.0, "ZN10OAKS_": 0.0, "ZN10OAKS_I": 0.0, "FEAT_NAME": null, "DATAFILE": null, "UNFILT_POS": "0", "GPS_HEIGHT": 0.0, "Max_PDOP": 0.0, "Corr_Type": null, "Std_Dev": 0.0, "Horz_Prec": 0.0, "Vert_Prec": 0.0, "Uniq_ID": 0.0, "SPECIES_NA": null, "DATE": "1899-12-30", "PHENOLOGY": null, "NUMBER_OF_": null, "PLANT_COMM": null, "NORTHING": 0.0, "EASTING": 0.0, "SOURCE": null, "SOURCETHM": null, "SCI_NAME": null, "MAPPED_BY": null, "SQUARE_FEE": null, "POP_DENSIT": null, "WHERE_IN_P": null, "PLANT_COM2": null, "GPS_DATE": "1899-12-30", "FOUND_HOW": null, "NEARBY_LAN": null, "ID_NUMBER": null, "COLLECTION": null, "FREQ_AT_SI": null, "COMMENT2": null, "ID": null, "JENNYID": null, "X": 0.0, "Y": 0.0, "GROVE_ID": null, "ACRES": 0.0, "HECTARES": 0.0, "RELEVE_RAN": "0", "TYPE": null, "GPS_TIME": null, "POINT_ID": 0.0, "DATA_DICTI": null, "LAT": 0.0, "LON": 0.0, "LOC_CODE": null, "PLANTCODE": null }, "geometry": { "type": "Point", "coordinates": [ -119.612659958939545, 34.000732241571292 ] } },
