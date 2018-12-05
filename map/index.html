@@ -10,12 +10,11 @@
         <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
         <link rel="stylesheet" href="css/MarkerCluster.css">
         <link rel="stylesheet" href="css/MarkerCluster.Default.css">
-        <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
         <link rel="stylesheet" href="css/leaflet-measure.css">
         <style>
         #map {
-            width: 629px;
-            height: 506px;
+            width: 630px;
+            height: 504px;
         }
         </style>
         <title></title>
@@ -32,14 +31,13 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
-        <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
         <script src="js/leaflet-measure.js"></script>
         <script src="js/leaflet.markercluster.js"></script>
         <script src="data/IslandOaks_6.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[33.21217236000029,-120.23774231874033],[34.52411568374407,-118.27201427132039]]);
+        }).fitBounds([[32.94974598184942,-120.51637297262674],[34.46847804826319,-118.2323113551859]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
         var measureControl = new L.Control.Measure({
@@ -88,171 +86,6 @@
         bounds_group.addLayer(layer_historic_5);
         map.addLayer(layer_historic_5);
         function pop_IslandOaks_6(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['FILESOURCE'] !== null ? Autolinker.link(String(feature.properties['FILESOURCE'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Comment'] !== null ? Autolinker.link(String(feature.properties['Comment'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['AREA'] !== null ? Autolinker.link(String(feature.properties['AREA'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['PERIMETER'] !== null ? Autolinker.link(String(feature.properties['PERIMETER'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['ZN10OAKS_'] !== null ? Autolinker.link(String(feature.properties['ZN10OAKS_'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['ZN10OAKS_I'] !== null ? Autolinker.link(String(feature.properties['ZN10OAKS_I'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['FEAT_NAME'] !== null ? Autolinker.link(String(feature.properties['FEAT_NAME'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['DATAFILE'] !== null ? Autolinker.link(String(feature.properties['DATAFILE'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['UNFILT_POS'] !== null ? Autolinker.link(String(feature.properties['UNFILT_POS'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['GPS_HEIGHT'] !== null ? Autolinker.link(String(feature.properties['GPS_HEIGHT'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Max_PDOP'] !== null ? Autolinker.link(String(feature.properties['Max_PDOP'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Corr_Type'] !== null ? Autolinker.link(String(feature.properties['Corr_Type'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Std_Dev'] !== null ? Autolinker.link(String(feature.properties['Std_Dev'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Horz_Prec'] !== null ? Autolinker.link(String(feature.properties['Horz_Prec'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Vert_Prec'] !== null ? Autolinker.link(String(feature.properties['Vert_Prec'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Uniq_ID'] !== null ? Autolinker.link(String(feature.properties['Uniq_ID'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['SPECIES_NA'] !== null ? Autolinker.link(String(feature.properties['SPECIES_NA'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['DATE'] !== null ? Autolinker.link(String(feature.properties['DATE'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['PHENOLOGY'] !== null ? Autolinker.link(String(feature.properties['PHENOLOGY'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NUMBER_OF_'] !== null ? Autolinker.link(String(feature.properties['NUMBER_OF_'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['PLANT_COMM'] !== null ? Autolinker.link(String(feature.properties['PLANT_COMM'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NORTHING'] !== null ? Autolinker.link(String(feature.properties['NORTHING'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['EASTING'] !== null ? Autolinker.link(String(feature.properties['EASTING'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['SOURCE'] !== null ? Autolinker.link(String(feature.properties['SOURCE'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['SOURCETHM'] !== null ? Autolinker.link(String(feature.properties['SOURCETHM'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['SCI_NAME'] !== null ? Autolinker.link(String(feature.properties['SCI_NAME'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['MAPPED_BY'] !== null ? Autolinker.link(String(feature.properties['MAPPED_BY'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['SQUARE_FEE'] !== null ? Autolinker.link(String(feature.properties['SQUARE_FEE'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['POP_DENSIT'] !== null ? Autolinker.link(String(feature.properties['POP_DENSIT'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['WHERE_IN_P'] !== null ? Autolinker.link(String(feature.properties['WHERE_IN_P'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['PLANT_COM2'] !== null ? Autolinker.link(String(feature.properties['PLANT_COM2'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['GPS_DATE'] !== null ? Autolinker.link(String(feature.properties['GPS_DATE'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['FOUND_HOW'] !== null ? Autolinker.link(String(feature.properties['FOUND_HOW'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NEARBY_LAN'] !== null ? Autolinker.link(String(feature.properties['NEARBY_LAN'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['ID_NUMBER'] !== null ? Autolinker.link(String(feature.properties['ID_NUMBER'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['COLLECTION'] !== null ? Autolinker.link(String(feature.properties['COLLECTION'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['FREQ_AT_SI'] !== null ? Autolinker.link(String(feature.properties['FREQ_AT_SI'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['COMMENT2'] !== null ? Autolinker.link(String(feature.properties['COMMENT2'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['ID'] !== null ? Autolinker.link(String(feature.properties['ID'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['JENNYID'] !== null ? Autolinker.link(String(feature.properties['JENNYID'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['X'] !== null ? Autolinker.link(String(feature.properties['X'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Y'] !== null ? Autolinker.link(String(feature.properties['Y'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['GROVE_ID'] !== null ? Autolinker.link(String(feature.properties['GROVE_ID'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['ACRES'] !== null ? Autolinker.link(String(feature.properties['ACRES'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['HECTARES'] !== null ? Autolinker.link(String(feature.properties['HECTARES'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['RELEVE_RAN'] !== null ? Autolinker.link(String(feature.properties['RELEVE_RAN'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['TYPE'] !== null ? Autolinker.link(String(feature.properties['TYPE'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['GPS_TIME'] !== null ? Autolinker.link(String(feature.properties['GPS_TIME'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['POINT_ID'] !== null ? Autolinker.link(String(feature.properties['POINT_ID'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['DATA_DICTI'] !== null ? Autolinker.link(String(feature.properties['DATA_DICTI'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['LAT'] !== null ? Autolinker.link(String(feature.properties['LAT'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['LON'] !== null ? Autolinker.link(String(feature.properties['LON'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['LOC_CODE'] !== null ? Autolinker.link(String(feature.properties['LOC_CODE'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['PLANTCODE'] !== null ? Autolinker.link(String(feature.properties['PLANTCODE'])) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
         function style_IslandOaks_6_0() {
@@ -291,16 +124,6 @@
 
         bounds_group.addLayer(layer_IslandOaks_6);
         cluster_IslandOaks_6.addTo(map);
-        var osmGeocoder = new L.Control.Geocoder({
-            collapsed: true,
-            position: 'topleft',
-            text: 'Search',
-            title: 'Testing'
-        }).addTo(map);
-        document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
-        .className += ' fa fa-search';
-        document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
-        .title += 'Search for a place';
         var baseMaps = {};
         L.control.layers(baseMaps,{'<img src="legend/IslandOaks_6.png" /> Island Oaks': cluster_IslandOaks_6,"historic": layer_historic_5,"MPI rcp4.5": layer_MPIrcp45_4,"CCSM4 rcp85": layer_CCSM4rcp85_3,"MIROC rcp45": layer_MIROCrcp45_2,"MIROC rcp85": layer_MIROCrcp85_1,"OpenStreetMap": layer_OpenStreetMap_0,},{collapsed:false}).addTo(map);
         setBounds();
