@@ -64,22 +64,18 @@
         var img_bounds_MIROCrcp85_1 = [[32.796900306100255,-120.45643503840638],[34.07891265179882,-118.28635032370873]];
         var layer_MIROCrcp85_1 = new L.imageOverlay(img_MIROCrcp85_1, img_bounds_MIROCrcp85_1);
         bounds_group.addLayer(layer_MIROCrcp85_1);
-        map.addLayer(layer_MIROCrcp85_1);
         var img_MIROCrcp45_2 = 'data/MIROCrcp45_2.png';
         var img_bounds_MIROCrcp45_2 = [[32.796900306100255,-120.45643503840638],[34.07891265179882,-118.28635032370873]];
         var layer_MIROCrcp45_2 = new L.imageOverlay(img_MIROCrcp45_2, img_bounds_MIROCrcp45_2);
         bounds_group.addLayer(layer_MIROCrcp45_2);
-        map.addLayer(layer_MIROCrcp45_2);
         var img_CCSM4rcp85_3 = 'data/CCSM4rcp85_3.png';
         var img_bounds_CCSM4rcp85_3 = [[32.796900306100255,-120.45643503840638],[34.07891265179882,-118.28635032370873]];
         var layer_CCSM4rcp85_3 = new L.imageOverlay(img_CCSM4rcp85_3, img_bounds_CCSM4rcp85_3);
         bounds_group.addLayer(layer_CCSM4rcp85_3);
-        map.addLayer(layer_CCSM4rcp85_3);
         var img_MPIrcp45_4 = 'data/MPIrcp45_4.png';
         var img_bounds_MPIrcp45_4 = [[32.796900306100255,-120.45643503840638],[34.07891265179882,-118.28635032370873]];
         var layer_MPIrcp45_4 = new L.imageOverlay(img_MPIrcp45_4, img_bounds_MPIrcp45_4);
         bounds_group.addLayer(layer_MPIrcp45_4);
-        map.addLayer(layer_MPIrcp45_4);
         var img_historic_5 = 'data/historic_5.png';
         var img_bounds_historic_5 = [[32.796900306100255,-120.45643503840638],[34.07891265179882,-118.28635032370873]];
         var layer_historic_5 = new L.imageOverlay(img_historic_5, img_bounds_historic_5);
@@ -125,7 +121,7 @@
         bounds_group.addLayer(layer_IslandOaks_6);
         cluster_IslandOaks_6.addTo(map);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/IslandOaks_6.png" /> Island Oaks': cluster_IslandOaks_6,"historic": layer_historic_5,"MPI rcp4.5": layer_MPIrcp45_4,"CCSM4 rcp85": layer_CCSM4rcp85_3,"MIROC rcp45": layer_MIROCrcp45_2,"MIROC rcp85": layer_MIROCrcp85_1,"OpenStreetMap": layer_OpenStreetMap_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/IslandOaks_6.png" /> Island Oaks': cluster_IslandOaks_6,"historic": layer_historic_5,"MPI rcp4.5": layer_MPIrcp45_4,"CCSM4 rcp8.5": layer_CCSM4rcp85_3,"MIROC rcp4.5": layer_MIROCrcp45_2,"MIROC rcp8.5": layer_MIROCrcp85_1,"OpenStreetMap": layer_OpenStreetMap_0,},{collapsed:false}).addTo(map);
         setBounds();
         L.ImageOverlay.include({
             getBounds: function () {
